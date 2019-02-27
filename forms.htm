@@ -6,7 +6,90 @@
   <title>long forms</title>
   <link href="_css/base.css" rel="stylesheet" type="text/css" media="screen">
   <style>
-    /*styles go here*/
+
+    .register-form {
+      line-height: 1.4;
+    }
+
+    .form-group {
+      background: #F6DDCE;
+      margin-bottom: 1em;
+      padding: 10px;
+    }
+
+    .form-group ul {
+	list-style: none;
+	margin: 0 0 2em;
+	padding: 0;
+}
+.form-group li {
+	margin-bottom: 0.5em;
+}
+.form-group h3 {
+	margin-bottom: 1em;
+}
+.form-fields input[type="text"],
+.form-fields input[type="tel"],
+.form-fields input[type="url"],
+.form-fields input[type="email"],
+.form-fields input[type="number"],
+.form-fields select {
+  box-sizing: border-box;
+  padding: 0.6em 0.8em;
+  color: #999;
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9em;
+  text-decoration: none;
+  line-height: normal;
+  max-height: 3em;
+}
+.form-fields input[type="text"]:focus,
+.form-fields input[type="tel"]:focus,
+.form-fields input[type="url"]:focus,
+.form-fields input[type="email"]:focus,
+.form-fields input[type="number"]:focus,
+.form-food textarea:focus,
+.form-fields select:focus {
+  color: #333;
+  border: 1px solid #C17CCF;
+  outline: none;
+  background: #f2f2f2;
+}
+
+.form-food textarea {
+  display: block;
+  box-sizing: border-box;
+  font: 0.9em Lato, Helvetica, sans-serif;
+  width: 90%;
+  height: 6em;
+  overflow: auto;
+  padding: 0.6em 0.8em;
+  color: #999;
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  line-height: normal;
+}
+
+.register-btn {
+	border-radius: 0px 2px 2px 0px;
+	box-sizing: content-box;
+	background: #8B798C;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: white;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	cursor: pointer;	
+}
+.register-btn:hover, .register-btn:focus {
+	background: #C17CCF;
+}
 </style>
 </head>
 
@@ -91,65 +174,63 @@
           <li><label for="email">Email:</label> <input type="email" name="email" id="email" placeholder="confirmation email"
               class="text-input"></li>
         </ul>
+        <h4>Registration Info</h4>
+        <p>This info will be on your badge and help us match you with information and events throughout the conference.
+          <ul class="form-fields">
+            <li><label for="description">Primary role:</label> <select class="select-menu" id="description" name="description">
+                <option value="designer">Designer</option>
+                <option value="developer">Developer</option>
+                <option value="other">Other</option>
+              </select></li>
+            <li><label for="job-title">Job title:</label> <input type="text" name="job-title" id="job-title"
+                placeholder="job title" class="text-input"></li>
+            <li><label for="company">Company:</label> <input type="text" name="company" id="company" placeholder="company"
+                class="text-input"></li>
+            <li><label for="phone">Phone:</label> <input type="tel" name="phone" id="phone" placeholder="your phone number"
+                class="text-input"></li>
+          </ul>
       </section>
-      <h4>Registration Info</h4>
-      <p>This info will be on your badge and help us match you with information and events throughout the conference.
-        <ul class="form-fields">
-          <li><label for="description">Primary role:</label> <select class="select-menu" id="description" name="description">
-              <option value="designer">Designer</option>
-              <option value="developer">Developer</option>
-              <option value="other">Other</option>
-            </select></li>
-          <li><label for="job-title">Job title:</label> <input type="text" name="job-title" id="job-title" placeholder="job title"
-              class="text-input"></li>
-          <li><label for="company">Company:</label> <input type="text" name="company" id="company" placeholder="company"
-              class="text-input"></li>
-          <li><label for="phone">Phone:</label> <input type="tel" name="phone" id="phone" placeholder="your phone number"
-              class="text-input"></li>
+      <section class="form-group">
+        <h3>Sessions</h3>
+        <h4>Skills</h4>
+        <p>Listing skills will help us match up our break out sessions and lunch!</p>
+        <ul class="form-skills">
+          <li><input type="checkbox" id="css" value="css"> <label for="css">CSS</label></li>
+          <li><input type="checkbox" id="html" value="html"> <label for="html">HTML</label></li>
+          <li><input type="checkbox" id="js" value="js"> <label for="js">JavaScript</label></li>
+          <li><input type="checkbox" id="content" value="content"> <label for="content">Content Strategy</label></li>
+          <li><input type="checkbox" id="ux" value="ux"> <label for="ux">UX</label></li>
+          <li><input type="checkbox" id="rails" value="rails"> <label for="rails">Rails</label></li>
+          <li><input type="checkbox" id="node" value="node"> <label for="node">Node</label></li>
+          <li><input type="checkbox" id="sass" value="sass"> <label for="sass">SASS</label></li>
+          <li><input type="checkbox" id="mobile" value="mobile"> <label for="mobile">Mobile</label></li>
         </ul>
-        <section class="form-group">
-          <h3>Sessions</h3>
-          <h4>Skills</h4>
-          <p>Listing skills will help us match up our break out sessions and lunch!</p>
-          <ul class="form-skills">
-            <li><input type="checkbox" id="css" value="css"> <label for="css">CSS</label></li>
-            <li><input type="checkbox" id="html" value="html"> <label for="html">HTML</label></li>
-            <li><input type="checkbox" id="js" value="js"> <label for="js">JavaScript</label></li>
-            <li><input type="checkbox" id="content" value="content"> <label for="content">Content Strategy</label></li>
-            <li><input type="checkbox" id="ux" value="ux"> <label for="ux">UX</label></li>
-            <li><input type="checkbox" id="rails" value="rails"> <label for="rails">Rails</label></li>
-            <li><input type="checkbox" id="node" value="node"> <label for="node">Node</label></li>
-            <li><input type="checkbox" id="sass" value="sass"> <label for="sass">SASS</label></li>
-            <li><input type="checkbox" id="mobile" value="mobile"> <label for="mobile">Mobile</label></li>
-          </ul>
-          <h4>Workshops</h4>
-          <p>Workshops are half-day, hands-on classes. Each are an additional $50.</p>
-          <ul class="form-workshop">
-            <li><input type="checkbox" id="forms-ws" value="forms"> <label for="forms-ws">Creating Responsive Forms
-                with
-                Flexbox</label></li>
-            <li><input type="checkbox" id="jekyll-ws" value="jekyll"> <label for="jekyll-ws">Blogging with Jekyll</label></li>
-            <li><input type="checkbox" id="usability-ws" value="usability"> <label for="usability-ws">Usability Testing
-                with Cats</label></li>
-            <li><input type="checkbox" id="node-ws" value="node"> <label for="node-ws">Building Stuff with Node</label></li>
-          </ul>
-          <h4>Lunch</h4>
-          <p>Lunch is provided each day. We have vegetarian options as well as gluten-free choices available. Please
-            let
-            us know about any food allergies or dietary restrictions.</p>
-          <ul class="form-food">
-            <li><input type="radio" id="meat" value="meat" name="food"> <label for="meat">Chicken, Beef, or Fish</label></li>
-            <li><input type="radio" id="vegetarian" value="vegetarian" name="food"> <label for="vegetarian">Vegetarian</label></li>
-            <li><input type="radio" id="gluten" value="gluten" name="food"> <label for="gluten">Gluten Free</label></li>
-            <li><label for="food-options">Please list any dietary restrictions:</label><textarea id="food-options" name="food-options"
-                class="text-area">food allergies or other restrictions</textarea> </li>
-          </ul>
-        </section>
-        <section class="form-submit">
-          <h4>All finished?</h4>
-          <p>We're looking forward to seeing you!</p>
-          <button type="submit" class="register-btn">Register</button>
-        </section>
+        <h4>Workshops</h4>
+        <p>Workshops are half-day, hands-on classes. Each are an additional $50.</p>
+        <ul class="form-workshop">
+          <li><input type="checkbox" id="forms-ws" value="forms"> <label for="forms-ws">Creating Responsive Forms with
+              Flexbox</label></li>
+          <li><input type="checkbox" id="jekyll-ws" value="jekyll"> <label for="jekyll-ws">Blogging with Jekyll</label></li>
+          <li><input type="checkbox" id="usability-ws" value="usability"> <label for="usability-ws">Usability Testing
+              with Cats</label></li>
+          <li><input type="checkbox" id="node-ws" value="node"> <label for="node-ws">Building Stuff with Node</label></li>
+        </ul>
+        <h4>Lunch</h4>
+        <p>Lunch is provided each day. We have vegetarian options as well as gluten-free choices available. Please let
+          us know about any food allergies or dietary restrictions.</p>
+        <ul class="form-food">
+          <li><input type="radio" id="meat" value="meat" name="food"> <label for="meat">Chicken, Beef, or Fish</label></li>
+          <li><input type="radio" id="vegetarian" value="vegetarian" name="food"> <label for="vegetarian">Vegetarian</label></li>
+          <li><input type="radio" id="gluten" value="gluten" name="food"> <label for="gluten">Gluten Free</label></li>
+          <li><label for="food-options">Please list any dietary restrictions:</label><textarea id="food-options" name="food-options"
+              class="text-area">food allergies or other restrictions</textarea> </li>
+        </ul>
+      </section>
+      <section class="form-submit">
+        <h4>All finished?</h4>
+        <p>We're looking forward to seeing you!</p>
+        <button type="submit" class="register-btn">Register</button>
+      </section>
     </form>
   </article>
 </body>
